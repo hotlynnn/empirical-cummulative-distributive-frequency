@@ -13,8 +13,6 @@ def ecdf(dataframe_column):
     # y-data for the ECDF: y
     y = np.arange(1, n+1) / n
 
-    return x, y
-
     #type in x-label
     x_label_name = str(input())
 
@@ -27,3 +25,4 @@ def ecdf(dataframe_column):
 
     # Display the plot
     plt.show()
+
