@@ -1,19 +1,22 @@
-def ecdf(dataframe_column):
+def ecdf(dataframe_name, dataframe_column_name):
     # import numpy and matplotlib
     import numpy as np
     import matplotlib.pyplot as plt
 
+    # extract column from dataframe
+    dataframe_column_name = dataframe_name[str(dataframe_column_name)]
+
     """Compute ECDF for a one-dimensional array of measurements."""
     # Number of data points: n
-    n = len(dataframe_column)
+    n = len(dataframe_column_name)
 
     # x-data for the ECDF: x
-    x = np.sort(dataframe_column)
+    x = np.sort(dataframe_column_name)
 
     # y-data for the ECDF: y
     y = np.arange(1, n+1) / n
 
-    #type in x-label
+    # type in x-label
     x_label_name = str(input())
 
     # Generate plot
@@ -23,6 +26,23 @@ def ecdf(dataframe_column):
     _ = plt.xlabel(x_label_name)
     _ = plt.ylabel('ECDF')
 
-    # Display the plot
+    # Specify array of percentiles: percentiles
+    percentiles = np.array([5, 25, 50, 75, 97.5])
+
+    # Compute percentiles: ptiles_vers
+    ptiles_vers = np.percentile(dataframe_column_name, percentiles)
+
+    # Print the result
+    #print(ptiles_vers)
+
+    # Overlay percentiles as red x's
+    _ = plt.plot(ptiles_vers, percentiles/100, marker='D', color='red',
+            linestyle='none')
+
+    # Show the plot
+    plt.show()
+
+    # Display the plot with 0.02 margin
+    plt.margins(0.02)
     plt.show()
 
