@@ -1,10 +1,7 @@
-def ecdf(dataframe_name, dataframe_column_name):
+def ecdf(dataframe_column_name):
     # import numpy and matplotlib
     import numpy as np
     import matplotlib.pyplot as plt
-
-    # extract column from dataframe
-    dataframe_column_name = dataframe_name[str(dataframe_column_name)]
 
     """Compute ECDF for a one-dimensional array of measurements."""
     # Number of data points: n
@@ -39,10 +36,6 @@ def ecdf(dataframe_name, dataframe_column_name):
     _ = plt.plot(ptiles_vers, percentiles/100, marker='D', color='red',
             linestyle='none')
 
-    # Show the plot
-    plt.show()
-
-    # Display the plot with 0.02 margin
+    # Show the plot within a margin of 0.02
     plt.margins(0.02)
     plt.show()
-
