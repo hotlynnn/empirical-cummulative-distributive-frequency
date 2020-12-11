@@ -1,0 +1,9 @@
+MANIFEST.in
+setup.py
+empirical_cdf/CHANGELOG.txt
+empirical_cdf/__init__.py
+empirical_cdf.egg-info/PKG-INFO
+empirical_cdf.egg-info/SOURCES.txt
+empirical_cdf.egg-info/dependency_links.txt
+empirical_cdf.egg-info/requires.txt
+empirical_cdf.egg-info/top_level.txt
