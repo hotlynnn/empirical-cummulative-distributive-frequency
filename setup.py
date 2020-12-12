@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='empirical_cdf',
-    version='0.0.1',
+    version='0.0.7',
     description='A Distribution Function Associated With The Empirical Measure Of A Sample.',
     url = 'https://github.com/Hotlynn2',
     author='Mr. Franklin Adjei',
